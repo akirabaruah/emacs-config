@@ -305,6 +305,17 @@ See https://github.com/justbur/emacs-which-key.
   (which-key-mode))
 #+end_src
 
+** YAML Mode
+
+See https://github.com/yoshiki/yaml-mode.
+
+#+begin_src emacs-lisp
+(use-package yaml-mode
+  :ensure t
+  :mode (("\\.yml\\'" . yaml-mode)
+         ("\\.yaml\\'" . yaml-mode)))
+#+end_src
+
 * Hydra Menus
 
 Definitions for Hydra menus. Requires the ~hydra~ package installed above.
