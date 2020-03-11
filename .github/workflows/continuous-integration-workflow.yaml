@@ -1,0 +1,19 @@
+name: Continuous Integration
+on: push
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        emacs_version: [26.2, 26.3, snapshot]
+    steps:
+      - uses: purcell/setup-emacs@v1.0
+        with:
+          version: ${{ matrix.emacs_version }}
+
+      - uses: actions/checkout@v2.0.0
+
+      - name: Run Emacs init
+        run: emacs --script init.el
