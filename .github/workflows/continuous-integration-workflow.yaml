@@ -17,6 +17,6 @@ jobs:
           path: .emacs.d
 
       - name: Run Emacs init
-        run: emacs --script init.el
+        run: emacs --script .emacs.d/init.el
         env:
           HOME: ${{ github.workspace }}
