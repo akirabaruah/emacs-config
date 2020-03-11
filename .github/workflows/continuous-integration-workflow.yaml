@@ -13,6 +13,10 @@ jobs:
           version: ${{ matrix.emacs_version }}
 
       - uses: actions/checkout@v2.0.0
+        with:
+          path: .emacs.d
 
       - name: Run Emacs init
         run: emacs --script init.el
+        env:
+          HOME: ${{ github.workspace }}
