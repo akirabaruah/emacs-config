@@ -37,7 +37,7 @@
   (require 'use-package))
 
 ;; Enable Org
-(use-package org :ensure org-plus-contrib)
+(use-package org :ensure t)
 
 ;; Load Org-based init file
 (defvar user-config-file (expand-file-name "README.org" user-emacs-directory))
