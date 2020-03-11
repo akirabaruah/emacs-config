@@ -316,6 +316,17 @@ See https://github.com/yoshiki/yaml-mode.
          ("\\.yaml\\'" . yaml-mode)))
 #+end_src
 
+** LSP Mode
+
+See https://github.com/emacs-lsp/lsp-mode.
+
+#+begin_src emacs-lisp
+(use-package lsp-mode
+  :ensure t
+  :hook ((c++-mode . lsp-deferred))
+  :commands lsp lsp-deferred)
+#+end_src
+
 * Hydra Menus
 
 Definitions for Hydra menus. Requires the ~hydra~ package installed above.
