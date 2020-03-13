@@ -3,12 +3,13 @@ on: push
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         emacs_version: [26.2, 26.3, snapshot]
+        os: [ubuntu-latest, macos-latest]
     steps:
-      - uses: purcell/setup-emacs@v1.0
+      - uses: purcell/setup-emacs@master
         with:
           version: ${{ matrix.emacs_version }}
 
