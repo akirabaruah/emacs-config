@@ -411,12 +411,6 @@ Language Server Protocol integration. See https://github.com/emacs-lsp/lsp-mode.
 (use-package lsp-mode
   :ensure t
   :hook (c++-mode . lsp-deferred)
-  :init
-  (setq
-    company-clang-insert-arguments nil
-    company-semantic-insert-arguments nil
-    company-rtags-insert-arguments nil
-    lsp-enable-snippet nil)
   :commands lsp lsp-deferred)
 #+end_src
 
