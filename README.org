@@ -261,7 +261,8 @@ https://github.com/dgutov/diff-hl.
 See https://github.com/Wilfred/helpful.
 
 #+begin_src emacs-lisp
-(use-package helpful)
+(use-package helpful
+  :ensure t)
 #+end_src
 
 * Content
@@ -371,7 +372,7 @@ https://github.com/AndreaCrotti/yasnippet-snippets.
 
 Cool themes from https://github.com/hlissner/emacs-doom-themes.
 
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp
 (use-package doom-themes
   :ensure t
   :config
@@ -382,7 +383,7 @@ Cool themes from https://github.com/hlissner/emacs-doom-themes.
 
 See https://github.com/seagle0128/doom-modeline.
 
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp
 (use-package doom-modeline
   :ensure t
   :hook (after-init . doom-modeline-mode))
